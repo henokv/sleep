@@ -1,0 +1,5 @@
+name: Sleep
+version: 0.0.1
+author: henokv
+main: dev.henokv.spigot.sleep.Main
+api-version: 1.14
