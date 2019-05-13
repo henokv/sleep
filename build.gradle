@@ -12,6 +12,13 @@ repositories {
     mavenLocal()
     maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
     maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven {
+        url 'https://pkgs.dev.azure.com/easik8spoc/_packaging/a/maven/v1'
+        credentials {
+            username "AZURE_ARTIFACTS"
+            password System.getenv("AZURE_ARTIFACTS_ENV_ACCESS_TOKEN") ?: "${azureArtifactsGradleAccessToken}"
+        }
+    }
 }
 
 dependencies {
